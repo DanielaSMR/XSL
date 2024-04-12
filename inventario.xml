@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="ejer2.xsl"?>
+<?xml-stylesheet type="text/xsl" href="ejer7.xsl"?>
 <inventario>
     <producto codigo="P1">
         <peso unidad="kg">10</peso>
@@ -13,6 +13,20 @@
         <nombre>Switch</nombre>
         <lugar edificio="A">
             <aula>6</aula>
+        </lugar>
+    </producto>
+    <producto codigo="P3">
+        <peso unidad='g'>4</peso>
+        <nombre>Nintendo</nombre>
+        <lugar edificio="B">
+            <aula>6</aula>
+        </lugar>
+    </producto>
+    <producto codigo="P4">
+        <peso unidad='g'>9000</peso>
+        <nombre>Television</nombre>
+        <lugar edificio="A">
+            <aula>7</aula>
         </lugar>
     </producto>
 </inventario>

@@ -4,12 +4,13 @@
     <xsl:template match="/">
         <html>
             <head>
-                <title>Ejer1</title>
+                <title>Ejer3</title>
             </head>
             <body>
-                <h2>Ejer1</h2>
+                <h2>Ejer3</h2>
                 <ul>
                     <xsl:for-each select="inventario/producto">
+                    <xsl:if test="peso[@unidad = 'kg'] and peso > 7 or peso[@unidad = 'g'] and peso > 7000">
                     <li>
                         Elemento <xsl:value-of select="@codigo"/>
                     </li>
@@ -21,6 +22,7 @@
                             Peso: <xsl:value-of select="peso"/> <xsl:value-of select="peso/@unidad"/> 
                         </li>
                     </ul>
+                    </xsl:if>
                     </xsl:for-each>
                 </ul>
             </body>
