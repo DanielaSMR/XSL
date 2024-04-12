@@ -11,7 +11,7 @@
                 <ul>
                     <xsl:for-each select="inventario/producto">
                     <xsl:choose>
-                    <xsl:when test="lugar[@edificio = 'B']">
+                    <xsl:when test="lugar/@edificio = 'B'">
                     <li>
                         Elemento <xsl:value-of select="@codigo"/>
                     </li>
