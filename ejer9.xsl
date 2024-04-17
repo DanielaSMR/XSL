@@ -26,7 +26,6 @@
                                     Peso: <xsl:value-of select="peso"/> <xsl:value-of select="peso/@unidad"/> 
                                 </li>
                             </ul>
-                            <!--<xsl:apply-templates select="//producto"/>-->
                         </ul>
                     </xsl:if>
                 </xsl:for-each>
@@ -36,7 +35,4 @@
         
     </xsl:template>
 
-    <!--<xsl:template match="producto">
-        <li><xsl:value-of select="nombre"/></li>
-    </xsl:template>-->
 </xsl:stylesheet>
