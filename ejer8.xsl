@@ -9,6 +9,9 @@
             <body>
                 <h2>Ejer8</h2>
                 <table border="1">
+                    <!--Otra manera de hacerlo es meter en el for-each la condicion de que el edificio sea A 
+                        y en el if unicamente lo del peso
+                    if test="(peso&lt;7 and peso/@unidad='kg"-->
                     <xsl:for-each select="inventario/producto">
                     <xsl:if test="lugar[@edificio = 'A'] and peso[@unidad = 'kg'] and peso &lt; 7 or peso[@unidad = 'g'] and peso &lt; 7000">
                     <tr>

@@ -11,6 +11,9 @@
                 <h3>Tabla A</h3>
                     <table border="1">
                         <xsl:for-each select="inventario/producto">
+                        <!--Otra solucion xsl <xsl:for-each select="producto[lugar/@edificio = A]
+                            Tambien meter todo lo de la tabla en un templeate 
+                            para solo tener que llamar con una linea en cada una de estas">-->
                         <xsl:if test="lugar[@edificio = 'A']">
                         <tr>
                             <td>

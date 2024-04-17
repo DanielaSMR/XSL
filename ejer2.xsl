@@ -29,5 +29,9 @@
                 </ul>
             </body>
         </html>
+        <!-- Resultado en xml
+        <inventario>
+            <xsl:copy-of select="producto[lugar/@edificio = 'A'] and lugar[aula = 6]"/>
+        </inventario>-->
     </xsl:template>
 </xsl:stylesheet>

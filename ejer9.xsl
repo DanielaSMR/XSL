@@ -11,25 +11,25 @@
             </head>
             <body>
                 <h2>Ejer9</h2>
-                <xsl:for-each select="//producto">
-                    <xsl:if test="peso/@unidad = $similar">
-                        <ul>
-                            
-                            <li>
-                                Elemento <xsl:value-of select="@codigo"/>
-                            </li>
-                            <ul>
+                <h3>Listado de productos con la unidad de peso en <xsl:value-of select="//producto/peso[@unidad = $similar]/@unidad"/></h3>
+                <p>Hay un total de <xsl:value-of select="count(//producto/peso[@unidad = $similar])"/> productos</p>
+                        <ol>
+                            <xsl:for-each select="//producto">
+                                <xsl:if test="peso/@unidad = $similar">
                                 <li>
-                                    Nombre: <xsl:value-of select="nombre"/>
+                                    Elemento <xsl:value-of select="@codigo"/>
                                 </li>
-                                <li>
-                                    Peso: <xsl:value-of select="peso"/> <xsl:value-of select="peso/@unidad"/> 
-                                </li>
-                            </ul>
-                        </ul>
-                    </xsl:if>
-                </xsl:for-each>
-                
+                                <ul>
+                                    <li>
+                                        Nombre: <xsl:value-of select="nombre"/>
+                                    </li>
+                                    <li>
+                                        Peso: <xsl:value-of select="peso"/> <xsl:value-of select="peso/@unidad"/> 
+                                    </li>
+                                </ul>
+                                </xsl:if>
+                            </xsl:for-each>
+                        </ol>
             </body>
         </html>
         

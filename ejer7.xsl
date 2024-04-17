@@ -4,8 +4,18 @@
     <xsl:template match="/">
         <inventario>
             <xsl:if test="//producto/lugar/aula = 6">
+                <producto>
                 <xsl:copy-of select="//producto/nombre"/>
+                </producto>
             </xsl:if>
         </inventario>
+        <!--Otra solucion  
+            <inventario>
+            <xsl:if test="//producto/lugar/aula = 6">
+                <producto>
+                    <nombre><xsl:value-of select="//producto/nombre"/></nombre>
+                </producto>
+            </xsl:if>
+        </inventario>-->
     </xsl:template>
 </xsl:stylesheet>
